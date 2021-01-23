@@ -46,7 +46,7 @@ class Simulator:
         self.owned_stocks[sym] += qty*[self.price(stk)]
 
 
-    def sell(self, stk, qty)
+    def sell(self, stk, qty):
         """ remove a new stock to simulated portfolio """
         self.equity + qty*self.price(stk)
         del self.owned_stocks[sym][-1*qty:]
