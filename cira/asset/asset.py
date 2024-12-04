@@ -79,6 +79,7 @@ class Asset:
         data = data.reset_index(level="symbol")
         data["timestamp"] = pd.to_datetime(data.index.get_level_values("timestamp"))
         data.set_index("timestamp", inplace=True)
+        data.index = data.index.date 
         return data
 
     def historical_data(
